@@ -1,11 +1,34 @@
 pipeline {
     agent any
-
     stages {
-        stage('Hello') {
+        stage('One') {
             steps {
-                echo 'Hello World'
-            }
-        }
-    }
+                echo 'Hi, this is Zulaikha from edureka'
+                }
+                }
+                        stage('Two') {
+                            when {
+                                not {
+                                    branch "master"
+                                    }
+                                    }
+                                    steps {
+                                        echo "Hello"
+                                    }
+                                    }
+                                    stage('three') {
+                                        parallel {
+                                            stage('Unit Test') {
+                                                steps {
+                                                    echo "Running the unit test..."
+                                                    }
+                                                    }
+                                                    stage('Integration test') {
+                                                        steps {
+                                                            echo "Running the integration test..."
+}
+}
+}
+}
+}
 }
