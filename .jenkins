@@ -6,16 +6,7 @@ pipeline {
                 echo 'Hi, this is Zulaikha from edureka'
                 }
                 }
-                        stage('Two') {
-                            when {
-                                not {
-                                    branch "master"
-                                    }
-                                    }
-                                    steps {
-                                        echo "Hello"
-                                    }
-                                    }
+                                  
                                     stage('three') {
                                         parallel {
                                             stage('Unit Test') {
